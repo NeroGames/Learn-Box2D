@@ -16,7 +16,7 @@ int main()
     //create the physical world
     b2World physicWorld(gravity);
 
-        //Step 1 : create an empty body
+        //Step 2 : create an empty body
     b2BodyDef bodyDef;
     bodyDef.position      = b2Vec2(0.f, 0.f);
     bodyDef.angle         = 0.f;
@@ -26,11 +26,11 @@ int main()
 
     b2Body* boxBody       = physicWorld.CreateBody(&bodyDef);
 
-        //Step 2 : create a box shape
+        //Step 3 : create a box shape
     b2PolygonShape boxShape;
     boxShape.SetAsBox(1, 1); //values are in meter not pixel
 
-        //Step 3 : create a fixture and provide the shape to the body
+        //Step 4 : create a fixture and provide the shape to the body
     b2FixtureDef fixtureDef;
     fixtureDef.shape        = &boxShape;
     fixtureDef.isSensor     = false;
@@ -40,7 +40,7 @@ int main()
 
     boxBody->CreateFixture(&fixtureDef);
 
-     //Step 4 : clean everything
+     //Step 5 : clean everything
     boxBody = nullptr;
 
     //print the world in console
