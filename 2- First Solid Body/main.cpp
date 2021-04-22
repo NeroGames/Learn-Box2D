@@ -23,6 +23,7 @@ int main()
     bodyDef.allowSleep    = true;
     bodyDef.fixedRotation = false;
     bodyDef.gravityScale  = 1.f;
+    bodyDef.type          = b2_dynamicBody;
 
     b2Body* boxBody       = physicWorld.CreateBody(&bodyDef);
 
