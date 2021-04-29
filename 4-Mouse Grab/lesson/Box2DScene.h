@@ -18,7 +18,7 @@ class Box2DScene : public ng::Scene
         DebugDraw               mDebugDraw;
         //mouse grabbing
         b2MouseJoint*           mMouseJoint;
-        b2Body*                 mGroundBody;
+        b2Body*                 mMouseGround;
 
     public:
         typedef std::unique_ptr<Box2DScene> ptr;
@@ -37,7 +37,7 @@ class Box2DScene : public ng::Scene
 
             //mouse grabbing
             b2BodyDef bodyDef;
-            mGroundBody = mPhysicWorld.CreateBody(&bodyDef);
+            mMouseGround = mPhysicWorld.CreateBody(&bodyDef);
 
 
             //create a rigid floor
@@ -105,7 +105,7 @@ class Box2DScene : public ng::Scene
                 b2Body* body        = callback.mFixture->GetBody();
 
                 b2MouseJointDef jointDef;
-                jointDef.bodyA      = mGroundBody;
+                jointDef.bodyA      = mMouseGround;
                 jointDef.bodyB      = body;
                 jointDef.target     = position;
                 jointDef.maxForce   = 1000.0f * body->GetMass();
