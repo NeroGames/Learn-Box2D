@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="box2d-mouse-grabbing" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/box2d-mouse-grabbing" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/box2d-mouse-grabbing" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="engine" />
+		</Compiler>
+		<Unit filename="engine/Engine.cpp" />
+		<Unit filename="engine/Engine.h" />
+		<Unit filename="engine/Gamepad.cpp" />
+		<Unit filename="engine/Gamepad.h" />
+		<Unit filename="engine/GamepadUtil.h" />
+		<Unit filename="engine/KeyboardUtil.h" />
+		<Unit filename="engine/PhysicsUtil.h" />
+		<Unit filename="engine/Scene.cpp" />
+		<Unit filename="engine/Scene.h" />
+		<Unit filename="lesson/Box2DScene.h" />
+		<Unit filename="lesson/DebugDraw.h" />
+		<Unit filename="lesson/MouseQueryCallback.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
